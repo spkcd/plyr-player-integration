@@ -1,0 +1,103 @@
+/**
+ * Custom styles for Plyr player integration with WordPress
+ */
+
+/* Ensure proper spacing in WordPress content */
+.wp-block-audio .plyr,
+.entry-content .plyr,
+.post-content .plyr {
+    margin-bottom: 1.75em;
+}
+
+/* Ensure the player doesn't overflow container */
+.plyr {
+    max-width: 100%;
+}
+
+/* Fully rounded player design */
+.plyr--audio {
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(145deg, #f8f9fa, #e9ecef);
+    padding: 4px;
+    margin: 10px 0;
+}
+
+/* Rounded controls bar */
+.plyr--audio .plyr__controls {
+    border-radius: 50px;
+    padding: 8px 15px;
+    background: rgba(255, 255, 255, 0.95);
+    color: #495057;
+}
+
+/* Rounded buttons */
+.plyr--audio .plyr__control {
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+.plyr--audio .plyr__control:hover {
+    background: rgba(0, 115, 170, 0.1);
+}
+
+/* Rounded progress bar */
+.plyr--audio .plyr__progress__container {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.plyr--audio .plyr__progress input[type="range"],
+.plyr--audio .plyr__progress__buffer {
+    border-radius: 50px;
+    height: 6px;
+}
+
+/* Rounded volume slider */
+.plyr--audio .plyr__volume input[type="range"] {
+    border-radius: 50px;
+    height: 6px;
+}
+
+/* Custom color for progress bar and active elements */
+.plyr--full-ui input[type="range"] {
+    color: #0073aa; /* WordPress blue */
+}
+
+.plyr--audio .plyr__control.plyr__tab-focus,
+.plyr--audio .plyr__control:hover,
+.plyr--audio .plyr__control[aria-expanded="true"] {
+    background: rgba(0, 115, 170, 0.2);
+    color: #0073aa;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .plyr--audio {
+        border-radius: 30px;
+        padding: 3px;
+    }
+    
+    .plyr--audio .plyr__controls {
+        padding: 6px 10px;
+        border-radius: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* More compact on very small screens */
+    .plyr--audio {
+        border-radius: 25px;
+        padding: 2px;
+    }
+    
+    .plyr--audio .plyr__controls {
+        padding: 4px 8px;
+        border-radius: 25px;
+    }
+    
+    .plyr--audio .plyr__time {
+        display: none; /* Hide time on very small screens */
+    }
+} 
